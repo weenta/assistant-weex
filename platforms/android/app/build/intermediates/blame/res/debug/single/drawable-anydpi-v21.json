@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/design/26.1.0/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/design/26.1.0/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    }
+]

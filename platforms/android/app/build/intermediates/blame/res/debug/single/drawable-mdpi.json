@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_refresh.png",
+        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/src/main/res/drawable-mdpi/ic_action_refresh.png"
+    },
+    {
+        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_scan.png",
+        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/src/main/res/drawable-mdpi/ic_action_scan.png"
+    }
+]

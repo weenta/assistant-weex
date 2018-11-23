@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.taobao.android/weexplugin-annotation/1.3/f9c594cafe95ab01986863300b2f2993b5777b42/weexplugin-annotation-1.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="f9c594cafe95ab01986863300b2f2993b5777b42">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/weexplugin-annotation-1.3_3774b7341f8c72bd0d42e19327065a47e2c731a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.taobao.android/weex_inspector/0.10.0.5/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="575d72d4a489260763ca62b2b54450fdec3bebd1">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.taobao.android-weex_inspector-0.10.0.5_41b5ca964a01f7bb3441af5816f145cf568b664b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_cfaa046f6e9b5939a1443de032a3f03d4d2a722c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-26.1.0_4c8360489a8a2c563ae5047be353f1d79e1c78fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0e1f104cf60bfe34147ef670229f2635789c79a4">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.journeyapps-zxing-android-embedded-3.4.0_35a23e0c54a3a290fa056590a2151355bc684b54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_63ab65483d5181fee1b4588dfad383098d9ae96e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.3.0/1b355f73402020c5a0dcca58affc3ec3dfeabac1/okio-1.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="1b355f73402020c5a0dcca58affc3ec3dfeabac1">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/okio-1.3.0_06173fcb2eac6db26e2c49aeb29a0e1281525943.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.alibaba/fastjson/1.1.46.android/108717c93f7aec31fb86db57cb4ad1e26034c638/fastjson-1.1.46.android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="108717c93f7aec31fb86db57cb4ad1e26034c638">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/fastjson-1.1.46.android_cff42685e688d29b45b120e61e53aad00b244d85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.3.0/2e7bc7033dc2c8423e661224171b3133fb155b28/okhttp-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2e7bc7033dc2c8423e661224171b3133fb155b28">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/okhttp-2.3.0_f5c22f8782acb93fd7d2ba06c1cde00842a08f00.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.taobao.android/weexplugin-loader/1.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c85f46e9eed1cccfd0bf5df199dd53a66de98651">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.taobao.android-weexplugin-loader-1.3_0948112de770baa2d7b15b17638d30f57368cf0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/transition/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="58b12bdb21a84f22e0dc3b047aeceb0a546b1b44">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-transition-26.1.0_ff83599d52033141c0adecf538dceee533b74943.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-26.1.0_4c67ff8851fbf7e9f143138ff54557f5299cdaaf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_e01b3e84e1d5f17e21a92c6545c193d600428178.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/support-annotations-26.1.0_70a3652d3a84157a57324fb69c815decf16b91ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-26.1.0_5213f6990a95e00ddeab0b8dea657bb55611c42b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/jsr305-2.0.1_a6610403031ae17120851f197b476848394f5e0c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-26.1.0_1aa6f426ecec5476650268c7209f9378311edb04.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-26.1.0_7942937b17afa78f9af96b70096d9346ec16f096.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.taobao.android/weex_sdk/0.16.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9cfcc5fc657d64c980b45db00cd75695d1ce2256">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.taobao.android-weex_sdk-0.16.0_9e7680c9420fa1469197901dd27618dd8bdf6ae9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b12cd9c87c3dfb012a911b6e38d2444ed0a65e1f">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-26.1.0_67a673a77bf6dfcc981d9b536474ac5416f6c8fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-26.1.0_4badb35188282fce244087cbdfd4733c73bfbc33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-ws/2.3.0/7896d229b6aa7884552ab9c23de54c7eb0de8203/okhttp-ws-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7896d229b6aa7884552ab9c23de54c7eb0de8203">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-2.3.0_152b0910429200fb480a376d630d8b18e43399e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.1.0_cd846a1ebe60e29bb0c332c012a5a03ab9fa3188.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/android.arch.lifecycle-runtime-1.0.0_12f19ba81c8da54e81736d9bdd79ff95f06b8cf4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/com.taobao.android/weexplugin-processor/1.3/90f4c5cdb14a255dd3cc341b563271494e8cd941/weexplugin-processor-1.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="90f4c5cdb14a255dd3cc341b563271494e8cd941">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/weexplugin-processor-1.3_365f0d9eb552b2ba848e09e48e88fb49b43ee0de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-26.1.0_3c14dd96974ff21094d1b7855922a4437318c755.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-26.1.0_55b153097c6bdd775a1485d8d0e9eaca0494a63a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/design/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a37fc31c5ceeaa4532a37358add1b189d8db4af1">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-design-26.1.0_1587fcdffc9901f60d331fc818076c44be5df833.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/weenta/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_8631078dd15a301718f1124b47271afa5745e221.jar" />
+    </item>
+
+</items>
