@@ -1,4 +1,5 @@
 import util from '../utils/util'
+import fetch from '../utils/fetch'
 
 /* eslint-disable no-undef */
 const navigator = weex.requireModule('navigator')
@@ -36,10 +37,12 @@ export default {
   methods: {
     // util工具库
     ...util,
+
+    // 网络请求封装
+    ...fetch,
     
     // 跳转
     _jump(path) {
-      console.log(this.baseUrl)
       navigator.push({
         url: this.baseUrl + path
       })

@@ -2,7 +2,9 @@
   <div class="wrapper">
     <wxc-tab-bar :tab-titles="tabTitles" :tab-styles="tabStyles" title-type="text" @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
       <!-- 第一个页面内容-->
-      <div class="item-container"><text>今日要闻</text></div>
+      <div class="item-container">
+        <news-list/>
+      </div>
 
       <!-- 第二个页面内容-->
       <div class="item-container"><text>开心一刻</text></div>
@@ -14,40 +16,44 @@
 </template>
 
 <script>
+const tabTitles = [
+  {
+    title: '今日要闻',
+  },
+  {
+    title: '开心一刻',
+  },
+  {
+    title: '生活助手',
+         
+  }
+]
+const tabStyles = {
+  bgColor: '#FFFFFF',
+  titleColor: '#666666',
+  activeTitleColor: '#3D3D3D',
+  activeBgColor: '#FFFFFF',
+  isActiveTitleBold: true,
+  width: 160,
+  height: 120,
+  fontSize: 24,
+  textPaddingLeft: 10,
+  textPaddingRight: 10
+}
 import mixin from '@/mixin'
 import { WxcTabBar } from 'weex-ui'
+import NewsList from '@/components/NewsList'
 export default {
   name: 'App',
   components: {
-    WxcTabBar
+    WxcTabBar,
+    NewsList
   },
   mixins: [mixin],
   data () {
     return {
-      tabTitles: [
-        {
-          title: '今日要闻',
-        },
-        {
-          title: '开心一刻',
-        },
-        {
-          title: '生活助手',
-         
-        }
-      ],
-      tabStyles: {
-        bgColor: '#FFFFFF',
-        titleColor: '#666666',
-        activeTitleColor: '#3D3D3D',
-        activeBgColor: '#FFFFFF',
-        isActiveTitleBold: true,
-        width: 160,
-        height: 120,
-        fontSize: 24,
-        textPaddingLeft: 10,
-        textPaddingRight: 10
-      },
+      tabTitles: tabTitles,
+      tabStyles: tabStyles,
 
     }
   },

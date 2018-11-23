@@ -1,8 +1,8 @@
-/* eslint-disable no-undef */
 /**
  * util 工具
  * 绑定在mixin上
  */
+/* eslint-disable-next-line no-undef */
 const modal = weex.requireModule('modal')
 export default {
   /**
@@ -25,5 +25,6 @@ export default {
       message: msg || '',
       duration: 1.5
     })
-  }
+  },
+  
 }

@@ -4,6 +4,10 @@
         "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/src/main/res/drawable-xxhdpi/ic_action_scan.png"
     },
     {
+        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi/app_logo.png",
+        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/src/main/res/drawable-xxhdpi/app_logo.png"
+    },
+    {
         "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_action_refresh.png",
         "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/src/main/res/drawable-xxhdpi/ic_action_refresh.png"
     }
