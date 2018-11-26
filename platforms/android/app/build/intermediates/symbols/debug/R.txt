@@ -1033,7 +1033,8 @@ int layout zxing_barcode_scanner 0x7f04003f
 int layout zxing_capture 0x7f040040
 int menu main 0x7f100000
 int menu main_scan 0x7f100001
-int mipmap ic_launcher 0x7f030000
+int mipmap assistant_weex 0x7f030000
+int mipmap ic_launcher 0x7f030001
 int raw zxing_beep 0x7f080000
 int string abc_action_bar_home_description 0x7f090000
 int string abc_action_bar_home_description_format 0x7f090001

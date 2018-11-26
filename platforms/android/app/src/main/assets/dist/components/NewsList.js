@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -105,11 +105,11 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _util = __webpack_require__(8);
+var _util = __webpack_require__(9);
 
 var _util2 = _interopRequireDefault(_util);
 
-var _fetch = __webpack_require__(9);
+var _fetch = __webpack_require__(10);
 
 var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -174,11 +174,15 @@ exports.default = {
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
+/* styles */
+__vue_styles__.push(__webpack_require__(7)
+)
+
 /* script */
-__vue_exports__ = __webpack_require__(7)
+__vue_exports__ = __webpack_require__(8)
 
 /* template */
-var __vue_template__ = __webpack_require__(11)
+var __vue_template__ = __webpack_require__(12)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -193,6 +197,7 @@ if (typeof __vue_options__ === "function") {
 __vue_options__.__file = "/Users/weenta/01data/03weex/03assistant/src/components/NewsList.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-9d5e847e"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -208,6 +213,12 @@ module.exports = __vue_exports__
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: CssSyntaxError: /Users/weenta/01data/03weex/03assistant/src/components/NewsList.vue:98:3: Unknown word\n    at Input.error (/Users/weenta/01data/03weex/03assistant/node_modules/_postcss@6.0.23@postcss/lib/input.js:119:22)\n    at Parser.unknownWord (/Users/weenta/01data/03weex/03assistant/node_modules/_postcss@6.0.23@postcss/lib/parser.js:506:26)\n    at Parser.other (/Users/weenta/01data/03weex/03assistant/node_modules/_postcss@6.0.23@postcss/lib/parser.js:171:18)\n    at Parser.parse (/Users/weenta/01data/03weex/03assistant/node_modules/_postcss@6.0.23@postcss/lib/parser.js:84:26)\n    at parse (/Users/weenta/01data/03weex/03assistant/node_modules/_postcss@6.0.23@postcss/lib/parse.js:24:16)\n    at new LazyResult (/Users/weenta/01data/03weex/03assistant/node_modules/_postcss@6.0.23@postcss/lib/lazy-result.js:70:24)\n    at Processor.process (/Users/weenta/01data/03weex/03assistant/node_modules/_postcss@6.0.23@postcss/lib/processor.js:117:12)\n    at Object.module.exports (/Users/weenta/01data/03weex/03assistant/node_modules/_weex-vue-loader@0.7.0@weex-vue-loader/lib/style-rewriter.js:96:6)");
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -221,7 +232,7 @@ var _mixin = __webpack_require__(4);
 
 var _mixin2 = _interopRequireDefault(_mixin);
 
-var _api = __webpack_require__(10);
+var _api = __webpack_require__(11);
 
 var _api2 = _interopRequireDefault(_api);
 
@@ -236,11 +247,19 @@ exports.default = {
   data: function data() {
     return {
       page: 1,
-      list: []
+      list: [],
+      loading: 'show'
     };
+  },
+  created: function created() {
+    this.testPost();
   },
 
   methods: {
+    onloading: function onloading() {
+      console.log('onloading');
+      this._toast('onLoading');
+    },
     test: function test() {
       this.testPost();
       // this.testGet()
@@ -262,7 +281,6 @@ exports.default = {
       });
     },
     testGet: function testGet() {
-      console.log('获取新闻详情');
       var url = _api2.default.NEWS_CATEGORY;
       var para = {
         appKey: _config2.default.NEWS_APP_KEY
@@ -282,9 +300,17 @@ exports.default = {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -325,7 +351,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -391,7 +417,7 @@ var toUrlParams = function toUrlParams(para) {
 exports.default = fetch;
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -417,30 +443,45 @@ exports.default = {
 };
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["news-list"]
-  }, [_c('text', {
-    on: {
-      "click": _vm.test
-    }
-  }, [_vm._v("今日要闻")]), _c('list', _vm._l((_vm.list), function(item, idx) {
+  }, [_c('list', [_vm._l((_vm.list), function(item, idx) {
     return _c('cell', {
       key: idx,
       appendAsTree: true,
       attrs: {
         "append": "tree"
       }
-    }, [_c('text', [_vm._v(_vm._s(item.title))])])
-  }))])
+    }, [_c('div', {
+      staticClass: ["cell"]
+    }, [_c('image', {
+      staticClass: ["news-img"],
+      attrs: {
+        "src": item.newsImg
+      }
+    }), _c('div', {
+      staticClass: ["news-info"]
+    }, [_c('text', {
+      staticClass: ["title"]
+    }, [_vm._v(_vm._s(item.title))]), _c('text', {
+      staticClass: ["source"]
+    }, [_vm._v(_vm._s(item.source))])])])])
+  }), _c('loading', {
+    attrs: {
+      "display": _vm.loading ? 'show' : 'hide'
+    },
+    on: {
+      "loading": _vm.onloading
+    }
+  }, [_vm._v("\n      ...\n    ")])], 2)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 12 */,
 /* 13 */,
 /* 14 */,
 /* 15 */,
@@ -450,7 +491,8 @@ module.exports.render._withStripped = true
 /* 19 */,
 /* 20 */,
 /* 21 */,
-/* 22 */
+/* 22 */,
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
