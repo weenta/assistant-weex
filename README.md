@@ -14,5 +14,5 @@ http://www.shujuzhihui.cn/
 
 ## Todo
 - 检测网络
-新闻列表
+点击跳转新闻详情
  

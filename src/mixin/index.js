@@ -1,5 +1,7 @@
 import util from '../utils/util'
 import fetch from '../utils/fetch'
+import config from '../config'
+import { Utils } from 'weex-ui'
 
 /* eslint-disable no-undef */
 const navigator = weex.requireModule('navigator')
@@ -11,6 +13,7 @@ export default {
       platform: weex.config.env.platform.toLowerCase(),
       deviceWidth: weex.config.env.deviceWidth,
       deviceHeight: weex.config.env.deviceHeight,
+      
     }
   },
   computed: {
@@ -32,7 +35,12 @@ export default {
         url = 'http://' + host + '/dist/'
       }
       return url
+    },
+
+    contentHeight() {
+      return Utils.env.getPageHeight()
     }
+   
   },
   methods: {
     // util工具库

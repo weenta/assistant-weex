@@ -1,6 +1,8 @@
 <template>
+  <!-- 新闻列表 -->
   <div class="news-list">
-    <list>
+    <!--  -->
+    <list :style='{height:contentHeight}' class="list" >
       <cell v-for='(item,idx) in list' :key='idx'>
         <div class="cell">
           <image :src='item.newsImg' class="news-img"/>
@@ -10,8 +12,8 @@
           </div>
         </div>
       </cell>
-      <loading :display="loading ? 'show' : 'hide'" @loading="onloading">
-        ...
+      <loading :display="loading ? 'show' : 'hide'" class="loading-wrapper" @loading="onloading">
+        <loading-indicator class="indicator"/>
       </loading>
     </list>
   </div>
@@ -20,23 +22,28 @@
 import mixin from '../mixin'
 import API from '../api'
 import config from '../config'
-
+import { WxcLoading,Utils } from 'weex-ui'
 export default {
+  components: {
+    WxcLoading
+  },
   mixins: [mixin],
   data() {
     return {
       page: 1,
       list: [],
-      loading: 'show'
+      loading: false
     }
+  },
+  computed: {
   },
   created() {
     this.testPost()
   },
   methods: {
     onloading() {
-      console.log('onloading')
-      this._toast('onLoading')
+      this.page ++
+      this.testPost()
     },
 
     test() {
@@ -51,11 +58,20 @@ export default {
         category: config.NEWS_CATEGORY,
         page: this.page
       }
+      this.loading = true
       this._post(url,para,res=>{
+        this.loading = false
         if (res.code === 0) {
-          let list = res.data.RESULT.newsList
-          this.list = list
+          let result = res.data.RESULT
+          if (typeof(result) === 'string') this._toast('没有更多了')
+          else this.__formatList(result.newsList)
         }
+      })
+    },
+
+    __formatList(list) {
+      list.forEach(e=>{
+        this.list.push(e)
       })
     },
 
@@ -73,12 +89,7 @@ export default {
 </script>
 <style lang="less" scoped>
 @import '../assets/mixin.less';
-.new-list {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.list {
   background: #ffffff;
 }
 .title {
@@ -107,5 +118,19 @@ export default {
   justify-content: space-around;
   padding-left: 10px;
 }
+.loading-wrapper {
+  width: 750px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator {
+  margin-top: 16px;
+  height: 80px;
+  width: 80px;
+  color:@color-accent;
+}
+
 </style>
 

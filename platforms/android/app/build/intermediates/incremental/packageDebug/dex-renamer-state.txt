@@ -1,4 +1,4 @@
-#Tue Nov 27 07:19:49 CST 2018
+#Wed Nov 28 07:29:06 CST 2018
 base.0=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
