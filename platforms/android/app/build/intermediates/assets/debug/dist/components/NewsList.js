@@ -1913,6 +1913,9 @@ exports.default = {
         url = 'http://' + host + '/dist/';
       }
       return url;
+    },
+    contentHeight: function contentHeight() {
+      return _weexUi.Utils.env.getPageHeight();
     }
   },
   methods: _extends({}, _util2.default, _fetch2.default, {
@@ -2021,20 +2024,11 @@ module.exports = {
     "alignItems": "center",
     "justifyContent": "center"
   },
-  "img": {
-    "width": "50",
-    "height": "50"
-  },
   "indicator": {
     "marginTop": "16",
     "height": "80",
     "width": "80",
-    "color": "#0000FF"
-  },
-  "box": {
-    "height": "200",
-    "width": "750",
-    "backgroundColor": "#FF0000"
+    "color": "#FF4081"
   }
 }
 
@@ -2085,8 +2079,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
 
 exports.default = {
   components: {
@@ -2100,29 +2092,23 @@ exports.default = {
       loading: false
     };
   },
+
+  computed: {},
   created: function created() {
     this.testPost();
   },
 
   methods: {
     onloading: function onloading() {
-      var _this = this;
-
-      console.log('-------->');
-      console.log(this.contentHeight);
-      console.log(this.deviceHeight);
-      console.log('-------->');
-      this.loading = true;
-      setTimeout(function () {
-        _this.loading = false;
-      }, 3000);
+      this.page++;
+      this.testPost();
     },
     test: function test() {
       this.testPost();
       // this.testGet()
     },
     testPost: function testPost() {
-      var _this2 = this;
+      var _this = this;
 
       var url = _api2.default.NEWS_LIST;
       var para = {
@@ -2132,18 +2118,18 @@ exports.default = {
       };
       this.loading = true;
       this._post(url, para, function (res) {
-        _this2.loading = false;
+        _this.loading = false;
         if (res.code === 0) {
-          var list = res.data.RESULT.newsList;
-          if (list.length > 0) _this2.__formatList(list);
+          var result = res.data.RESULT;
+          if (typeof result === 'string') _this._toast('没有更多了');else _this.__formatList(result.newsList);
         }
       });
     },
     __formatList: function __formatList(list) {
-      var _this3 = this;
+      var _this2 = this;
 
       list.forEach(function (e) {
-        _this3.list.push(e);
+        _this2.list.push(e);
       });
     },
     testGet: function testGet() {
@@ -18851,7 +18837,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_vm._v(_vm._s(item.title))]), _c('text', {
       staticClass: ["source"]
     }, [_vm._v(_vm._s(item.source))])])])])
-  }), _vm._m(0), _c('loading', {
+  }), _c('loading', {
     staticClass: ["loading-wrapper"],
     attrs: {
       "display": _vm.loading ? 'show' : 'hide'
@@ -18862,16 +18848,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('loading-indicator', {
     staticClass: ["indicator"]
   })])], 2)])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('cell', {
-    appendAsTree: true,
-    attrs: {
-      "append": "tree"
-    }
-  }, [_c('div', {
-    staticClass: ["box"]
-  })])
-}]}
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 
 /***/ }),
