@@ -4,7 +4,7 @@
     <!--  -->
     <list :style='{height:contentHeight}' class="list" >
       <cell v-for='(item,idx) in list' :key='idx'>
-        <div class="cell">
+        <div class="cell" @click="goNewsDetail(item.title)">
           <image :src='item.newsImg' class="news-img"/>
           <div class="news-info border-bottom">
             <text class="title">{{ item.title }}</text>
@@ -12,7 +12,7 @@
           </div>
         </div>
       </cell>
-      <loading :display="loading ? 'show' : 'hide'" class="loading-wrapper" @loading="onloading">
+      <loading :display="loading ? 'show' : 'hide'" class="loading-wrapper" @loading="loadMore">
         <loading-indicator class="indicator"/>
       </loading>
     </list>
@@ -38,20 +38,23 @@ export default {
   computed: {
   },
   created() {
-    this.testPost()
+    this.fetchNewsList()
   },
   methods: {
-    onloading() {
+    // 加载下一页
+    loadMore() {
       this.page ++
-      this.testPost()
+      this.fetchNewsList()
     },
 
-    test() {
-      this.testPost()
-      // this.testGet()
+    // 跳转详情页
+    goNewsDetail(title) {
+      
+      this._jump('pages/NewsDetail.js')
     },
 
-    testPost() {
+    // 获取新闻列表
+    fetchNewsList() {
       let url = API.NEWS_LIST
       let para = {
         appKey: config.NEWS_APP_KEY,
@@ -69,12 +72,14 @@ export default {
       })
     },
 
+    // 格式化列表
     __formatList(list) {
       list.forEach(e=>{
         this.list.push(e)
       })
     },
 
+    // test
     testGet() {
       let url = API.NEWS_CATEGORY
       let para = {

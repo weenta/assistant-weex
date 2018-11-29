@@ -5,6 +5,7 @@ import { Utils } from 'weex-ui'
 
 /* eslint-disable no-undef */
 const navigator = weex.requireModule('navigator')
+const storage = weex.requireModule('storage')
 export default {
   data() {
     return {
@@ -49,7 +50,10 @@ export default {
     // 网络请求封装
     ...fetch,
     
-    // 跳转
+    /**
+     * 跳转
+     * @param {String} path pages/NewsDetail.js
+     */
     _jump(path) {
       navigator.push({
         url: this.baseUrl + path
@@ -59,7 +63,39 @@ export default {
     // 返回
     _back() {
       navigator.pop()
-    }
+    },
 
+    /**
+     * storage.setItem封装
+     * @param {String} key key
+     * @param {String} value val
+     */
+    _setItem(key,value) {
+      return new Promise((resolve,reject)=>{
+        storage.setItem(key, value, e => {
+          if (e.result === 'success') {
+            resolve()
+          } else {
+            reject(e.data)
+          }
+        })
+      })
+    },
+
+    /**
+     * storage.getItem 封装
+     * @param {String} key key
+     */
+    _getItem(key) {
+      return new Promise((resolve,reject)=>{
+        storage.getItem(key, e => {
+          if (e.result === 'success') {
+            resolve(e.data)
+          } else {
+            reject(e.data)
+          }
+        })
+      })
+    },
   }
 }

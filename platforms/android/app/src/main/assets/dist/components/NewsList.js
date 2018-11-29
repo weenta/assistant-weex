@@ -1882,6 +1882,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /* eslint-disable no-undef */
 var navigator = weex.requireModule('navigator');
+var storage = weex.requireModule('storage');
 exports.default = {
   data: function data() {
     return {
@@ -1920,7 +1921,10 @@ exports.default = {
   },
   methods: _extends({}, _util2.default, _fetch2.default, {
 
-    // 跳转
+    /**
+     * 跳转
+     * @param {String} path pages/NewsDetail.js
+     */
     _jump: function _jump(path) {
       navigator.push({
         url: this.baseUrl + path
@@ -1931,6 +1935,41 @@ exports.default = {
     // 返回
     _back: function _back() {
       navigator.pop();
+    },
+
+
+    /**
+     * storage.setItem封装
+     * @param {String} key key
+     * @param {String} value val
+     */
+    _setItem: function _setItem(key, value) {
+      return new Promise(function (resolve, reject) {
+        storage.setItem(key, value, function (e) {
+          if (e.result === 'success') {
+            resolve();
+          } else {
+            reject(e.data);
+          }
+        });
+      });
+    },
+
+
+    /**
+     * storage.getItem 封装
+     * @param {String} key key
+     */
+    _getItem: function _getItem(key) {
+      return new Promise(function (resolve, reject) {
+        storage.getItem(key, function (e) {
+          if (e.result === 'success') {
+            resolve(e.data);
+          } else {
+            reject(e.data);
+          }
+        });
+      });
     }
   })
 };
@@ -2096,19 +2135,26 @@ exports.default = {
 
   computed: {},
   created: function created() {
-    this.testPost();
+    this.fetchNewsList();
   },
 
   methods: {
-    onloading: function onloading() {
+    // 加载下一页
+    loadMore: function loadMore() {
       this.page++;
-      this.testPost();
+      this.fetchNewsList();
     },
-    test: function test() {
-      this.testPost();
-      // this.testGet()
+
+
+    // 跳转详情页
+    goNewsDetail: function goNewsDetail(title) {
+
+      this._jump('pages/NewsDetail.js');
     },
-    testPost: function testPost() {
+
+
+    // 获取新闻列表
+    fetchNewsList: function fetchNewsList() {
       var _this = this;
 
       var url = _api2.default.NEWS_LIST;
@@ -2126,6 +2172,9 @@ exports.default = {
         }
       });
     },
+
+
+    // 格式化列表
     __formatList: function __formatList(list) {
       var _this2 = this;
 
@@ -2133,6 +2182,9 @@ exports.default = {
         _this2.list.push(e);
       });
     },
+
+
+    // test
     testGet: function testGet() {
       var url = _api2.default.NEWS_CATEGORY;
       var para = {
@@ -18825,7 +18877,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "append": "tree"
       }
     }, [_c('div', {
-      staticClass: ["cell"]
+      staticClass: ["cell"],
+      on: {
+        "click": function($event) {
+          _vm.goNewsDetail(item.title)
+        }
+      }
     }, [_c('image', {
       staticClass: ["news-img"],
       attrs: {
@@ -18844,7 +18901,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "display": _vm.loading ? 'show' : 'hide'
     },
     on: {
-      "loading": _vm.onloading
+      "loading": _vm.loadMore
     }
   }, [_c('loading-indicator', {
     staticClass: ["indicator"]

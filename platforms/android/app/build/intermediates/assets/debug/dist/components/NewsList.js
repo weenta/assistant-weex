@@ -1920,7 +1920,10 @@ exports.default = {
   },
   methods: _extends({}, _util2.default, _fetch2.default, {
 
-    // 跳转
+    /**
+     * 跳转
+     * @param {String} path pages/NewsDetail.js
+     */
     _jump: function _jump(path) {
       navigator.push({
         url: this.baseUrl + path
@@ -1993,7 +1996,7 @@ module.exports = {
     "background": "#ffffff"
   },
   "title": {
-    "color": "#FF0000",
+    "color": "#333333",
     "fontSize": "26"
   },
   "source": {
@@ -2096,19 +2099,27 @@ exports.default = {
 
   computed: {},
   created: function created() {
-    this.testPost();
+    this.fetchNewsList();
   },
 
   methods: {
-    onloading: function onloading() {
+    // 加载下一页
+    loadMore: function loadMore() {
       this.page++;
-      this.testPost();
+      this.fetchNewsList();
     },
-    test: function test() {
-      this.testPost();
-      // this.testGet()
+
+
+    // 跳转详情页
+    goNewsDetail: function goNewsDetail(item) {
+      console.log('跳转详情');
+      console.log(item.title);
+      this._jump('pages/NewsDetail.js');
     },
-    testPost: function testPost() {
+
+
+    // 获取新闻列表
+    fetchNewsList: function fetchNewsList() {
       var _this = this;
 
       var url = _api2.default.NEWS_LIST;
@@ -18825,7 +18836,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "append": "tree"
       }
     }, [_c('div', {
-      staticClass: ["cell"]
+      staticClass: ["cell"],
+      on: {
+        "click": function($event) {
+          _vm.goNewsDetail(item)
+        }
+      }
     }, [_c('image', {
       staticClass: ["news-img"],
       attrs: {
@@ -18835,7 +18851,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: ["news-info", "border-bottom"]
     }, [_c('text', {
       staticClass: ["title"]
-    }, [_vm._v("aaa" + _vm._s(item.title))]), _c('text', {
+    }, [_vm._v(_vm._s(item.title))]), _c('text', {
       staticClass: ["source"]
     }, [_vm._v(_vm._s(item.source))])])])])
   }), _c('loading', {
@@ -18844,7 +18860,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "display": _vm.loading ? 'show' : 'hide'
     },
     on: {
-      "loading": _vm.onloading
+      "loading": _vm.loadMore
     }
   }, [_c('loading-indicator', {
     staticClass: ["indicator"]
