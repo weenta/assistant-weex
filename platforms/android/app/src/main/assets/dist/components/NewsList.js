@@ -2016,7 +2016,8 @@ module.exports = {
     "display": "flex",
     "flexDirection": "column",
     "justifyContent": "space-around",
-    "paddingLeft": "10"
+    "paddingLeft": "10",
+    "paddingRight": "20"
   },
   "loading-wrapper": {
     "width": "750",

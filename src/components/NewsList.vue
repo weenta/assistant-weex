@@ -117,6 +117,7 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   padding-left: 10px;
+  padding-right: 20px;
 }
 .loading-wrapper {
   width: 750px;

@@ -1993,7 +1993,7 @@ module.exports = {
     "background": "#ffffff"
   },
   "title": {
-    "color": "#333333",
+    "color": "#FF0000",
     "fontSize": "26"
   },
   "source": {
@@ -2016,7 +2016,8 @@ module.exports = {
     "display": "flex",
     "flexDirection": "column",
     "justifyContent": "space-around",
-    "paddingLeft": "10"
+    "paddingLeft": "10",
+    "paddingRight": "20"
   },
   "loading-wrapper": {
     "width": "750",
@@ -18834,7 +18835,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: ["news-info", "border-bottom"]
     }, [_c('text', {
       staticClass: ["title"]
-    }, [_vm._v(_vm._s(item.title))]), _c('text', {
+    }, [_vm._v("aaa" + _vm._s(item.title))]), _c('text', {
       staticClass: ["source"]
     }, [_vm._v(_vm._s(item.source))])])])])
   }), _c('loading', {
