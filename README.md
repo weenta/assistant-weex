@@ -11,10 +11,11 @@ http://www.shujuzhihui.cn/
 
 
 ## Note
-
+### 新闻详情webview
+调用android原生webview
 ## Todo
 - 检测网络
 - 图片加载-loading
+- android sdk 升级0.19.0
 
-封装storage-点击跳转新闻详情
  

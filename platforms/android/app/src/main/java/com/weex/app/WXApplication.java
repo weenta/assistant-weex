@@ -5,8 +5,10 @@ import android.os.Build;
 import android.os.StrictMode;
 
 import com.weex.app.extend.ImageAdapter;
+import com.weex.app.extend.RichText;
 import com.weex.app.extend.WXEventModule;
 import com.alibaba.weex.plugin.loader.WeexPluginContainer;
+import com.weex.app.extend.WebviewCompontent;
 import com.weex.app.util.AppConfig;
 import com.taobao.weex.InitConfig;
 import com.taobao.weex.WXSDKEngine;
@@ -30,6 +32,11 @@ public class WXApplication extends Application {
     );
     try {
       WXSDKEngine.registerModule("event", WXEventModule.class);
+      // demo TextView扩展
+      WXSDKEngine.registerComponent("richText", RichText.class);
+      // WebView 扩展
+      WXSDKEngine.registerComponent("webView", WebviewCompontent.class);
+
     } catch (WXException e) {
       e.printStackTrace();
     }

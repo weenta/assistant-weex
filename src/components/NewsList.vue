@@ -4,7 +4,7 @@
     <!--  -->
     <list :style='{height:contentHeight}' class="list" >
       <cell v-for='(item,idx) in list' :key='idx'>
-        <div class="cell" @click="goNewsDetail(item.title)">
+        <div class="cell" @click="goNewsDetail(item)">
           <image :src='item.newsImg' class="news-img"/>
           <div class="news-info border-bottom">
             <text class="title">{{ item.title }}</text>
@@ -48,9 +48,16 @@ export default {
     },
 
     // 跳转详情页
-    goNewsDetail(title) {
-      
-      this._jump('pages/NewsDetail.js')
+    goNewsDetail(item) {
+      let newsInfo = {
+        title: item.title,
+        newsId: item.newsId
+      }
+      this._setItem('NEWS_INFO',JSON.stringify(newsInfo)).then(()=>{
+        this._jump('pages/NewsDetail.js')
+      }).catch((error)=>{
+        this._toast(error)
+      })
     },
 
     // 获取新闻列表

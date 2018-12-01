@@ -5,39 +5,50 @@ const headers = {
   'Content-Type': 'application/x-www-form-urlencoded'
 }
 const fetch = {
-  // get请求
+  /**
+   * get请求
+   * @param {String} url url
+   * @param {Object} para para
+   * @param {Function} cb cb
+   */
   _get(url,para,cb) {
-    stream.fetch({
+    let options = {
       method: 'GET',
       type: 'json',
-      url: url + '?' + toUrlParams(para),
-      
-    },response=>{
+      url: url + '?' + toUrlParams(para)
+    }
+    stream.fetch(options,response=>{
       let data = {
         code: response.ok ? 0 : response.status,
         data: response.data,
         msg: response.statusText
       }
       cb(data)
-    })
+    },progress=>{})
   },
 
-  // post请求
+  /**
+   * post请求
+   * @param {String} url url
+   * @param {Object} para para
+   * @param {Function} cb cb
+   */
   _post(url,para,cb) {
-    stream.fetch({
+    let options = {
       method: 'POST',
       url: url,
       body: toUrlParams(para),
       type: 'json',
       headers: headers,
-    },response=>{
+    }
+    stream.fetch(options,response=>{
       let data = {
         code: response.ok ? 0 : response.status,
         data: response.data,
         msg: response.statusText
       }
       cb(data)
-    })
+    },progress=>{})
   }
 }
 
