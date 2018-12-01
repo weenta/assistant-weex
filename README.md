@@ -11,8 +11,10 @@ http://www.shujuzhihui.cn/
 
 
 ## Note
-### 新闻详情webview
-调用android原生webview
+### 新闻详情
+- 通过`Component 扩展`调用android原生webview    
+http://weex.apache.org/cn/guide/extend-android.html
+
 ## Todo
 - 检测网络
 - 图片加载-loading
