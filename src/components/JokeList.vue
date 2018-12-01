@@ -2,6 +2,9 @@
   <!-- 笑话大全 -->
   <div class="joke-list">
     <list :style='{height:contentHeight}' class="list">
+      <refresh :display="loading ? 'show' : 'hide'" class="loading-wrapper" @refresh="onRefresh">
+        <loading-indicator class="indicator"/>
+      </refresh>
       <cell v-for='(item,idx) in list' :key="idx">
         <text class="joke-text border-bottom">{{ item.content }}</text>
       </cell>
@@ -26,7 +29,7 @@ export default {
   data() {
     return {  
       page: 1,
-      pageSize: 10,
+      pageSize: 20,
       list: [],
       loading: false,
     }
@@ -36,6 +39,13 @@ export default {
   },
 
   methods: {
+    // 下拉刷新
+    onRefresh() {
+      this.list = []
+      this.page = 1
+      this.getJokeList()
+    },
+    
     // 加载下一页
     loadMore() {
       this.page ++
@@ -56,7 +66,7 @@ export default {
         if (res.code === 0) {
           let result = res.data.result
           if (result) this.__formatList(result.data)
-          else this._toast(res.data.reason)
+          else this._toast('开心一刻' + res.data.reason)
         }
       })
     },

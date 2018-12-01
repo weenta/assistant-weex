@@ -22,4 +22,5 @@ http://weex.apache.org/cn/guide/extend-android.html
 - 检测网络
 - 图片加载-loading
 - weex_sdk 升级0.19.0
-- news jokes下拉刷新
+
+美女图片

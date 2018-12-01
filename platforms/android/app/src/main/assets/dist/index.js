@@ -18949,6 +18949,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
 
 
 exports.default = {
@@ -18959,7 +18962,7 @@ exports.default = {
   data: function data() {
     return {
       page: 1,
-      pageSize: 10,
+      pageSize: 20,
       list: [],
       loading: false
     };
@@ -18970,6 +18973,14 @@ exports.default = {
 
 
   methods: {
+    // 下拉刷新
+    onRefresh: function onRefresh() {
+      this.list = [];
+      this.page = 1;
+      this.getJokeList();
+    },
+
+
     // 加载下一页
     loadMore: function loadMore() {
       this.page++;
@@ -18992,7 +19003,7 @@ exports.default = {
         _this.loading = false;
         if (res.code === 0) {
           var result = res.data.result;
-          if (result) _this.__formatList(result.data);else _this._toast(res.data.reason);
+          if (result) _this.__formatList(result.data);else _this._toast('开心一刻' + res.data.reason);
         }
       });
     },
@@ -19018,7 +19029,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     style: {
       height: _vm.contentHeight
     }
-  }, [_vm._l((_vm.list), function(item, idx) {
+  }, [_c('refresh', {
+    staticClass: ["loading-wrapper"],
+    attrs: {
+      "display": _vm.loading ? 'show' : 'hide'
+    },
+    on: {
+      "refresh": _vm.onRefresh
+    }
+  }, [_c('loading-indicator', {
+    staticClass: ["indicator"]
+  })]), _vm._l((_vm.list), function(item, idx) {
     return _c('cell', {
       key: idx,
       appendAsTree: true,
@@ -19187,6 +19208,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
 
 exports.default = {
   components: {
@@ -19207,6 +19231,14 @@ exports.default = {
   },
 
   methods: {
+    // 下拉刷新
+    onRefresh: function onRefresh() {
+      this.list = [];
+      this.page = 1;
+      this.fetchNewsList();
+    },
+
+
     // 加载下一页
     loadMore: function loadMore() {
       this.page++;
@@ -19286,7 +19318,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     style: {
       height: _vm.contentHeight
     }
-  }, [_vm._l((_vm.list), function(item, idx) {
+  }, [_c('refresh', {
+    staticClass: ["loading-wrapper"],
+    attrs: {
+      "display": _vm.loading ? 'show' : 'hide'
+    },
+    on: {
+      "refresh": _vm.onRefresh
+    }
+  }, [_c('loading-indicator', {
+    staticClass: ["indicator"]
+  })]), _vm._l((_vm.list), function(item, idx) {
     return _c('cell', {
       key: idx,
       appendAsTree: true,

@@ -3,6 +3,9 @@
   <div class="news-list">
     <!--  -->
     <list :style='{height:contentHeight}' class="list" >
+      <refresh :display="loading ? 'show' : 'hide'" class="loading-wrapper" @refresh="onRefresh">
+        <loading-indicator class="indicator"/>
+      </refresh>
       <cell v-for='(item,idx) in list' :key='idx'>
         <div class="cell" @click="goNewsDetail(item)">
           <image :src='item.newsImg' class="news-img"/>
@@ -41,6 +44,13 @@ export default {
     this.fetchNewsList()
   },
   methods: {
+    // 下拉刷新
+    onRefresh() {
+      this.list = []
+      this.page = 1
+      this.fetchNewsList()
+    },
+
     // 加载下一页
     loadMore() {
       this.page ++
