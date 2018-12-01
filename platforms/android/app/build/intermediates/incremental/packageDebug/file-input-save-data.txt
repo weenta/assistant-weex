@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Dec 01 16:00:35 CST 2018
+#Sat Dec 01 16:25:18 CST 2018
 210.set=ANDROID_RESOURCE
 282.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable/design_snackbar_background.xml
 14.set=ANDROID_RESOURCE

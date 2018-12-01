@@ -1342,7 +1342,7 @@ exports.default = {
     iconHeight: 50,
     width: 160,
     height: 100,
-    fontSize: 14,
+    fontSize: 18,
     textPaddingLeft: 10,
     textPaddingRight: 10
   }

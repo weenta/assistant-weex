@@ -54,8 +54,9 @@ export default {
       this._get(url,para,res=>{
         this.loading = false
         if (res.code === 0) {
-          let list = res.data.result.data
-          this.__formatList(list)
+          let result = res.data.result
+          if (result) this.__formatList(result.data)
+          else this._toast(res.data.reason)
         }
       })
     },

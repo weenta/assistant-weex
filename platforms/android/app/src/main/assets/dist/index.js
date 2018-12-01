@@ -1342,7 +1342,7 @@ exports.default = {
     iconHeight: 50,
     width: 160,
     height: 100,
-    fontSize: 14,
+    fontSize: 18,
     textPaddingLeft: 10,
     textPaddingRight: 10
   }
@@ -18991,8 +18991,8 @@ exports.default = {
       this._get(url, para, function (res) {
         _this.loading = false;
         if (res.code === 0) {
-          var list = res.data.result.data;
-          _this.__formatList(list);
+          var result = res.data.result;
+          if (result) _this.__formatList(result.data);else _this._toast(res.data.reason);
         }
       });
     },
