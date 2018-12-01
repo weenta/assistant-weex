@@ -1,4 +1,8 @@
-// 封装fetch api
+/**
+ * 封装网络请求
+ * _get() _post()
+ * 挂在mixin上
+ */
 /* eslint-disable-next-line no-undef */
 const stream = weex.requireModule('stream')
 const headers = {
@@ -7,9 +11,9 @@ const headers = {
 const fetch = {
   /**
    * get请求
-   * @param {String} url url
-   * @param {Object} para para
-   * @param {Function} cb cb
+   * @param {string} url url
+   * @param {object} para para
+   * @param {function} cb cb
    */
   _get(url,para,cb) {
     let options = {
@@ -29,9 +33,9 @@ const fetch = {
 
   /**
    * post请求
-   * @param {String} url url
-   * @param {Object} para para
-   * @param {Function} cb cb
+   * @param {string} url url
+   * @param {object} para para
+   * @param {function} cb cb
    */
   _post(url,para,cb) {
     let options = {

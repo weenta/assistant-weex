@@ -3,6 +3,7 @@ export default {
   NEWS_APP_KEY: 'c3c1dcbd7a4e400ab3dc56c6053cd3e4',
   NEWS_CATEGORY: '要闻',
   SJZH_BASE_URL: 'http://api.shujuzhihui.cn/api/',
+  EXPRESS_APP_KEY: 'd743f88b20bc46c991d910a594bcb8da',
 
   // 聚合数据-笑话大全
   JHSJ_BASE_URL: 'http://v.juhe.cn/',

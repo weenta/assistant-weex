@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 251);
+/******/ 	return __webpack_require__(__webpack_require__.s = 261);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1310,6 +1310,7 @@ exports.default = {
   NEWS_APP_KEY: 'c3c1dcbd7a4e400ab3dc56c6053cd3e4',
   NEWS_CATEGORY: '要闻',
   SJZH_BASE_URL: 'http://api.shujuzhihui.cn/api/',
+  EXPRESS_APP_KEY: 'd743f88b20bc46c991d910a594bcb8da',
 
   // 聚合数据-笑话大全
   JHSJ_BASE_URL: 'http://v.juhe.cn/',
@@ -1966,7 +1967,7 @@ exports.default = {
           if (e.result === 'success') {
             resolve(e.data);
           } else {
-            reject('存储错误');
+            reject('存储异常');
           }
         });
       });
@@ -1986,7 +1987,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 /**
  * util 工具
- * 绑定在mixin上
+ * 
+ * native端`Vue.use(plugin)`无效，暂挂在mixin上
  */
 /* eslint-disable-next-line no-undef */
 var modal = weex.requireModule('modal');
@@ -2025,7 +2027,11 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// 封装fetch api
+/**
+ * 封装网络请求
+ * _get() _post()
+ * 挂在mixin上
+ */
 /* eslint-disable-next-line no-undef */
 var stream = weex.requireModule('stream');
 var headers = {
@@ -2034,9 +2040,9 @@ var headers = {
 var fetch = {
   /**
    * get请求
-   * @param {String} url url
-   * @param {Object} para para
-   * @param {Function} cb cb
+   * @param {string} url url
+   * @param {object} para para
+   * @param {function} cb cb
    */
   _get: function _get(url, para, cb) {
     var options = {
@@ -2057,9 +2063,9 @@ var fetch = {
 
   /**
    * post请求
-   * @param {String} url url
-   * @param {Object} para para
-   * @param {Function} cb cb
+   * @param {string} url url
+   * @param {object} para para
+   * @param {function} cb cb
    */
   _post: function _post(url, para, cb) {
     var options = {
@@ -18647,25 +18653,36 @@ exports.default = {
   NEWS_DETAIL: _config2.default.SJZH_BASE_URL + 'news/detail',
 
   // 笑话大全
-  JOKE_LIST: _config2.default.JHSJ_BASE_URL + 'joke/content/text.php'
+  JOKE_LIST: _config2.default.JHSJ_BASE_URL + 'joke/content/text.php',
+
+  // 快递查询
+  EXPRESS_TRACE: _config2.default.SJZH_BASE_URL + 'sjzhApi/searchExpress'
 };
 
 /***/ }),
-/* 247 */
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(248)
+__vue_styles__.push(__webpack_require__(256)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(249)
+__vue_exports__ = __webpack_require__(257)
 
 /* template */
-var __vue_template__ = __webpack_require__(250)
+var __vue_template__ = __webpack_require__(258)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -18695,7 +18712,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 248 */
+/* 256 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -18749,7 +18766,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 249 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18883,7 +18900,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 250 */
+/* 258 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -18935,13 +18952,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 251 */
+/* 259 */,
+/* 260 */,
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _NewsList = __webpack_require__(247);
+var _NewsList = __webpack_require__(255);
 
 var _NewsList2 = _interopRequireDefault(_NewsList);
 

@@ -1,6 +1,7 @@
 /**
  * util 工具
- * 绑定在mixin上
+ * 
+ * native端`Vue.use(plugin)`无效，暂挂在mixin上
  */
 /* eslint-disable-next-line no-undef */
 const modal = weex.requireModule('modal')

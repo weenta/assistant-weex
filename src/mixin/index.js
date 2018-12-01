@@ -92,7 +92,7 @@ export default {
           if (e.result === 'success') {
             resolve(e.data)
           } else {
-            reject('存储错误')
+            reject('存储异常')
           }
         })
       })

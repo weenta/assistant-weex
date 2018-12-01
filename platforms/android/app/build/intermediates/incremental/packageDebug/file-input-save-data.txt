@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Dec 01 11:30:43 CST 2018
+#Sat Dec 01 16:00:35 CST 2018
 210.set=ANDROID_RESOURCE
 282.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable/design_snackbar_background.xml
 14.set=ANDROID_RESOURCE
@@ -106,7 +106,7 @@
 287.set=ANDROID_RESOURCE
 162.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 291.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
-193.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+193.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
 142.set=ANDROID_RESOURCE
 248.set=ANDROID_RESOURCE
 189.set=ANDROID_RESOURCE
@@ -174,7 +174,7 @@
 30.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_btn_colored_material.xml
 145.set=ANDROID_RESOURCE
 213.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
-82.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+82.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
 136.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 265.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 188.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
@@ -183,7 +183,7 @@
 163.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 106.set=ANDROID_RESOURCE
 292.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
-194.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+194.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
 190.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 152.set=ANDROID_RESOURCE
 258.set=ANDROID_RESOURCE
@@ -206,7 +206,7 @@
 277.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 200.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 123.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
-221.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+221.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
 144.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/design_password_eye.xml
 252.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 175.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
@@ -251,7 +251,7 @@
 155.set=ANDROID_RESOURCE
 62.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 214.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
-83.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+83.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
 137.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 12.set=ANDROID_RESOURCE
 266.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
@@ -284,7 +284,7 @@
 201.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 70.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/color/abc_hint_foreground_material_dark.xml
 124.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
-222.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+222.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
 145.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable/notification_bg.xml
 253.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 176.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
@@ -561,7 +561,7 @@ count=295
 66.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 218.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 87.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png
-10.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+10.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
 41.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 52.set=ANDROID_RESOURCE
 116.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
@@ -640,7 +640,7 @@ count=295
 67.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 219.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 88.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/color/abc_secondary_text_material_dark.xml
-11.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+11.file=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
 42.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_
 62.set=ANDROID_RESOURCE
 117.base=/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/resources-debug.ap_

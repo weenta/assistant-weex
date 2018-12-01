@@ -11,4 +11,7 @@ export default {
   
   // 笑话大全
   JOKE_LIST: config.JHSJ_BASE_URL + 'joke/content/text.php',
+
+  // 快递查询
+  EXPRESS_TRACE: config.SJZH_BASE_URL + 'sjzhApi/searchExpress'
 }

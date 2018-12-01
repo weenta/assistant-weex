@@ -11,8 +11,10 @@
         <joke-list/>
       </div>
 
-      <!-- 第三个页面内容-->
-      <div class="item-container"><text>生活助手</text></div>
+      <!-- 生活助手 -->
+      <div class="item-container">
+        <assistant />
+      </div>
     </wxc-tab-bar>
   </div>
 </template>
@@ -24,12 +26,14 @@ import { WxcTabBar } from 'weex-ui'
 import config from '@/config'
 import NewsList from '@/components/NewsList'
 import JokeList from '@/components/JokeList'
+import Assistant from '@/components/Assistant'
 export default {
   name: 'App',
   components: {
     WxcTabBar,
     NewsList,
-    JokeList
+    JokeList,
+    Assistant
   },
   mixins: [mixin],
   data () {
