@@ -7,5 +7,8 @@ export default {
   NEWS_CATEGORY: config.SJZH_BASE_URL + 'news/categories',
 
   // 新闻详情
-  NEWS_DETAIL: config.SJZH_BASE_URL + 'news/detail'
+  NEWS_DETAIL: config.SJZH_BASE_URL + 'news/detail',
+  
+  // 笑话大全
+  JOKE_LIST: config.JHSJ_BASE_URL + 'joke/content/text.php',
 }

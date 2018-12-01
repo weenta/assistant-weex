@@ -1306,14 +1306,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  // 数据智汇-新闻appKey
+  // 数据智汇-新闻appKey category baseUrl
   NEWS_APP_KEY: 'c3c1dcbd7a4e400ab3dc56c6053cd3e4',
-
-  // 新闻类型
   NEWS_CATEGORY: '要闻',
-
-  // 数据智汇-baseUrl
   SJZH_BASE_URL: 'http://api.shujuzhihui.cn/api/',
+
+  // 聚合数据-笑话大全
+  JHSJ_BASE_URL: 'http://v.juhe.cn/',
+  JOKE_KEY: 'b6295e146775567e051f25bdce25941b',
 
   // 底部导航栏title icon
   tabTitles: [{
@@ -18644,7 +18644,10 @@ exports.default = {
   NEWS_CATEGORY: _config2.default.SJZH_BASE_URL + 'news/categories',
 
   // 新闻详情
-  NEWS_DETAIL: _config2.default.SJZH_BASE_URL + 'news/detail'
+  NEWS_DETAIL: _config2.default.SJZH_BASE_URL + 'news/detail',
+
+  // 笑话大全
+  JOKE_LIST: _config2.default.JHSJ_BASE_URL + 'joke/content/text.php'
 };
 
 /***/ }),
@@ -18701,6 +18704,18 @@ module.exports = {
     "borderBottomColor": "#cccccc",
     "borderBottomStyle": "solid"
   },
+  "loading-wrapper": {
+    "width": "750",
+    "height": "80",
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "indicator": {
+    "marginTop": "16",
+    "height": "80",
+    "width": "80",
+    "color": "#FF4081"
+  },
   "list": {
     "background": "#ffffff"
   },
@@ -18730,18 +18745,6 @@ module.exports = {
     "justifyContent": "space-around",
     "paddingLeft": "10",
     "paddingRight": "20"
-  },
-  "loading-wrapper": {
-    "width": "750",
-    "height": "80",
-    "alignItems": "center",
-    "justifyContent": "center"
-  },
-  "indicator": {
-    "marginTop": "16",
-    "height": "80",
-    "width": "80",
-    "color": "#FF4081"
   }
 }
 

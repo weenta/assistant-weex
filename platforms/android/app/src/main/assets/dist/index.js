@@ -1306,14 +1306,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  // 数据智汇-新闻appKey
+  // 数据智汇-新闻appKey category baseUrl
   NEWS_APP_KEY: 'c3c1dcbd7a4e400ab3dc56c6053cd3e4',
-
-  // 新闻类型
   NEWS_CATEGORY: '要闻',
-
-  // 数据智汇-baseUrl
   SJZH_BASE_URL: 'http://api.shujuzhihui.cn/api/',
+
+  // 聚合数据-笑话大全
+  JHSJ_BASE_URL: 'http://v.juhe.cn/',
+  JOKE_KEY: 'b6295e146775567e051f25bdce25941b',
 
   // 底部导航栏title icon
   tabTitles: [{
@@ -18644,7 +18644,10 @@ exports.default = {
   NEWS_CATEGORY: _config2.default.SJZH_BASE_URL + 'news/categories',
 
   // 新闻详情
-  NEWS_DETAIL: _config2.default.SJZH_BASE_URL + 'news/detail'
+  NEWS_DETAIL: _config2.default.SJZH_BASE_URL + 'news/detail',
+
+  // 笑话大全
+  JOKE_LIST: _config2.default.JHSJ_BASE_URL + 'joke/content/text.php'
 };
 
 /***/ }),
@@ -18701,6 +18704,18 @@ module.exports = {
     "borderBottomColor": "#cccccc",
     "borderBottomStyle": "solid"
   },
+  "loading-wrapper": {
+    "width": "750",
+    "height": "80",
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "indicator": {
+    "marginTop": "16",
+    "height": "80",
+    "width": "80",
+    "color": "#FF4081"
+  },
   "list": {
     "background": "#ffffff"
   },
@@ -18730,18 +18745,6 @@ module.exports = {
     "justifyContent": "space-around",
     "paddingLeft": "10",
     "paddingRight": "20"
-  },
-  "loading-wrapper": {
-    "width": "750",
-    "height": "80",
-    "alignItems": "center",
-    "justifyContent": "center"
-  },
-  "indicator": {
-    "marginTop": "16",
-    "height": "80",
-    "width": "80",
-    "color": "#FF4081"
   }
 }
 
@@ -19053,32 +19056,18 @@ var _NewsList = __webpack_require__(247);
 
 var _NewsList2 = _interopRequireDefault(_NewsList);
 
+var _JokeList = __webpack_require__(262);
+
+var _JokeList2 = _interopRequireDefault(_JokeList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 exports.default = {
   name: 'App',
   components: {
     WxcTabBar: _weexUi.WxcTabBar,
-    NewsList: _NewsList2.default
+    NewsList: _NewsList2.default,
+    JokeList: _JokeList2.default
   },
   mixins: [_mixin2.default],
   data: function data() {
@@ -19093,14 +19082,29 @@ exports.default = {
   created: function created() {},
 
   methods: {
-    wxcTabBarCurrentTabSelected: function wxcTabBarCurrentTabSelected() {},
-    helloHandler: function helloHandler() {
-      this._toast('jump to homepage');
-      var path = 'pages/Home.js';
-      this._jump(path);
+    wxcTabBarCurrentTabSelected: function wxcTabBarCurrentTabSelected(e) {
+      console.log(e);
     }
   }
-};
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 /* 256 */
@@ -19125,11 +19129,233 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('news-list')], 1), _c('div', {
     staticClass: ["item-container"]
-  }, [_c('text', [_vm._v("开心一刻")])]), _c('div', {
+  }, [_c('joke-list')], 1), _c('div', {
     staticClass: ["item-container"]
   }, [_c('text', [_vm._v("生活助手")])])])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
+
+/***/ }),
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(264)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(265)
+
+/* template */
+var __vue_template__ = __webpack_require__(263)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/weenta/01data/03weex/03assistant/src/components/JokeList.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-576c7766"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 263 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["joke-list"]
+  }, [_c('list', {
+    staticClass: ["list"],
+    style: {
+      height: _vm.contentHeight
+    }
+  }, [_vm._l((_vm.list), function(item, idx) {
+    return _c('cell', {
+      key: idx,
+      appendAsTree: true,
+      attrs: {
+        "append": "tree"
+      }
+    }, [_c('text', {
+      staticClass: ["joke-text", "border-bottom"]
+    }, [_vm._v(_vm._s(item.content))])])
+  }), _c('loading', {
+    staticClass: ["loading-wrapper"],
+    attrs: {
+      "display": _vm.loading ? 'show' : 'hide'
+    },
+    on: {
+      "loading": _vm.loadMore
+    }
+  }, [_c('loading-indicator', {
+    staticClass: ["indicator"]
+  })])], 2)])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 264 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "border-bottom": {
+    "borderBottomWidth": "1",
+    "borderBottomColor": "#cccccc",
+    "borderBottomStyle": "solid"
+  },
+  "loading-wrapper": {
+    "width": "750",
+    "height": "80",
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "indicator": {
+    "marginTop": "16",
+    "height": "80",
+    "width": "80",
+    "color": "#FF4081"
+  },
+  "list": {
+    "background": "#ffffff"
+  },
+  "title": {
+    "fontSize": "50"
+  },
+  "joke-text": {
+    "fontSize": "28",
+    "paddingLeft": "20",
+    "paddingRight": "20",
+    "paddingTop": "50",
+    "paddingBottom": "50",
+    "color": "#333333",
+    "lineHeight": "60",
+    "background": "#ffffff"
+  }
+}
+
+/***/ }),
+/* 265 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mixin = __webpack_require__(16);
+
+var _mixin2 = _interopRequireDefault(_mixin);
+
+var _api = __webpack_require__(246);
+
+var _api2 = _interopRequireDefault(_api);
+
+var _config = __webpack_require__(4);
+
+var _config2 = _interopRequireDefault(_config);
+
+var _weexUi = __webpack_require__(7);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+  components: {
+    WxcLoading: _weexUi.WxcLoading
+  },
+  mixins: [_mixin2.default],
+  data: function data() {
+    return {
+      page: 1,
+      pageSize: 10,
+      list: [],
+      loading: false
+    };
+  },
+  created: function created() {
+    this.getJokeList();
+  },
+
+
+  methods: {
+    // 加载下一页
+    loadMore: function loadMore() {
+      this.page++;
+      this.getJokeList();
+    },
+
+
+    // 获取笑话列表
+    getJokeList: function getJokeList() {
+      var _this = this;
+
+      var url = _api2.default.JOKE_LIST;
+      var para = {
+        page: this.page,
+        pageSize: this.pageSize,
+        key: _config2.default.JOKE_KEY
+      };
+      this.loading = true;
+      this._get(url, para, function (res) {
+        _this.loading = false;
+        if (res.code === 0) {
+          var list = res.data.result.data;
+          _this.__formatList(list);
+        }
+      });
+    },
+    __formatList: function __formatList(data) {
+      var _this2 = this;
+
+      data.forEach(function (e) {
+        _this2.list.push(e);
+      });
+    }
+  }
+};
 
 /***/ })
 /******/ ]);

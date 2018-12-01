@@ -6,8 +6,10 @@
         <news-list/>
       </div>
 
-      <!-- 第二个页面内容-->
-      <div class="item-container"><text>开心一刻</text></div>
+      <!-- 开心一刻-->
+      <div class="item-container">
+        <joke-list/>
+      </div>
 
       <!-- 第三个页面内容-->
       <div class="item-container"><text>生活助手</text></div>
@@ -21,11 +23,13 @@ import mixin from '@/mixin'
 import { WxcTabBar } from 'weex-ui'
 import config from '@/config'
 import NewsList from '@/components/NewsList'
+import JokeList from '@/components/JokeList'
 export default {
   name: 'App',
   components: {
     WxcTabBar,
-    NewsList
+    NewsList,
+    JokeList
   },
   mixins: [mixin],
   data () {
@@ -42,14 +46,9 @@ export default {
    
   },
   methods: {
-    wxcTabBarCurrentTabSelected() {
-
-    },
-
-    helloHandler() {
-      this._toast('jump to homepage')
-      let path = 'pages/Home.js'
-      this._jump(path)
+    wxcTabBarCurrentTabSelected(e) {
+      console.log(e)
+      
     },
   }
 }

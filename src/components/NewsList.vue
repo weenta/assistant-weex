@@ -22,7 +22,7 @@
 import mixin from '../mixin'
 import API from '../api'
 import config from '../config'
-import { WxcLoading,Utils } from 'weex-ui'
+import { WxcLoading } from 'weex-ui'
 export default {
   components: {
     WxcLoading
@@ -130,19 +130,6 @@ export default {
   justify-content: space-around;
   padding-left: 10px;
   padding-right: 20px;
-}
-.loading-wrapper {
-  width: 750px;
-  height: 80px;
-  align-items: center;
-  justify-content: center;
-}
-
-.indicator {
-  margin-top: 16px;
-  height: 80px;
-  width: 80px;
-  color:@color-accent;
 }
 
 </style>
