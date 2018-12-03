@@ -8,6 +8,9 @@ export default {
   // 聚合数据-笑话大全
   JHSJ_BASE_URL: 'http://v.juhe.cn/',
   JOKE_KEY: 'b6295e146775567e051f25bdce25941b',
+
+  // 干货集中营-美女福利
+  GH_BASE_URL: 'https://gank.io/api/',
   
   // 底部导航栏title icon
   tabTitles: [
@@ -20,6 +23,11 @@ export default {
       title: '开心一刻',
       icon: 'http://weex-proj.oss-cn-beijing.aliyuncs.com/01assistant/joke_off.png',
       activeIcon: 'http://weex-proj.oss-cn-beijing.aliyuncs.com/01assistant/joke_on.png'
+    },
+    {
+      title: '美女社区',
+      icon: 'http://weex-proj.oss-cn-beijing.aliyuncs.com/01assistant/girl_off.png',
+      activeIcon: 'http://weex-proj.oss-cn-beijing.aliyuncs.com/01assistant/girl_on.png'
     },
     {
       title: '生活助手',

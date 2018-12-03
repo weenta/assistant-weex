@@ -10,6 +10,11 @@
       <div class="item-container">
         <joke-list/>
       </div>
+      
+      <!-- 美女社区 -->
+      <div class="item-container">
+        <girl-list/>
+      </div>
 
       <!-- 生活助手 -->
       <div class="item-container">
@@ -27,13 +32,16 @@ import config from '@/config'
 import NewsList from '@/components/NewsList'
 import JokeList from '@/components/JokeList'
 import Assistant from '@/components/Assistant'
+import GirlList from '@/components/GirlList'
 export default {
   name: 'App',
   components: {
     WxcTabBar,
     NewsList,
     JokeList,
-    Assistant
+    GirlList,
+    Assistant,
+
   },
   mixins: [mixin],
   data () {

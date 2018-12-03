@@ -13,5 +13,8 @@ export default {
   JOKE_LIST: config.JHSJ_BASE_URL + 'joke/content/text.php',
 
   // 快递查询
-  EXPRESS_TRACE: config.SJZH_BASE_URL + 'sjzhApi/searchExpress'
+  EXPRESS_TRACE: config.SJZH_BASE_URL + 'sjzhApi/searchExpress',
+
+  // 美女福利
+  GIRL_LIST: config.GH_BASE_URL + 'data/福利/20/'
 }
