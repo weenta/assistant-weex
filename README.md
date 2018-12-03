@@ -25,3 +25,4 @@ http://weex.apache.org/cn/guide/extend-android.html
 - 检测网络
 - weex_sdk 升级0.19.0
 
+图片预览闪动

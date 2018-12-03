@@ -18912,21 +18912,6 @@ module.exports = {
     "width": "350",
     "height": "400",
     "marginBottom": "10"
-  },
-  "preview-wrapper": {
-    "position": "absolute",
-    "top": 0,
-    "bottom": 0,
-    "left": 0,
-    "right": 0,
-    "backgroundColor": "rgba(0,0,0,0.8)"
-  },
-  "img-preview": {
-    "width": "650",
-    "height": "900",
-    "position": "absolute",
-    "top": "100",
-    "left": "50"
   }
 }
 
@@ -18949,37 +18934,23 @@ var _mixin = __webpack_require__(16);
 
 var _mixin2 = _interopRequireDefault(_mixin);
 
+var _weexUi = __webpack_require__(15);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 exports.default = {
-  components: {},
+  components: {
+    WxcLightbox: _weexUi.WxcLightbox
+  },
   mixins: [_mixin2.default],
   data: function data() {
     return {
       page: 1,
-      list: [],
+      list: [], // 美女图片
+      previewList: [], // 预览列表
       loading: false,
       showPreview: false,
-      previewUrl: ''
+      indicatorColor: { 'item-color': 'rgba(255, 195, 0, .5)', 'item-selected-color': '#ffc300', 'item-size': '0' }
     };
   },
   created: function created() {
@@ -18987,14 +18958,16 @@ exports.default = {
   },
 
   methods: {
+    // 关闭图片
     closePreview: function closePreview() {
       this.showPreview = false;
     },
 
+
     // 预览图片
-    previewImg: function previewImg(item) {
+    previewImg: function previewImg(idx) {
+      this.previewList = this.list.slice(idx);
       this.showPreview = true;
-      this.previewUrl = item.url;
     },
 
 
@@ -19032,12 +19005,33 @@ exports.default = {
       var _this2 = this;
 
       list.forEach(function (e) {
-        _this2.list.push(e);
+        var o = { src: e.url };
+        _this2.list.push(o);
       });
     }
   }
 
-};
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 /* 254 */
@@ -19073,13 +19067,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('image', {
       staticClass: ["girl-img"],
       attrs: {
-        "src": item.url,
+        "src": item.src,
         "placeholder": _vm.oss + 'girl_off.png',
         "resize": "cover"
       },
       on: {
         "click": function($event) {
-          _vm.previewImg(item)
+          _vm.previewImg(idx)
         }
       }
     })])
@@ -19093,20 +19087,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('loading-indicator', {
     staticClass: ["indicator"]
-  })])], 2), (_vm.showPreview) ? _c('div', {
-    staticClass: ["preview-wrapper"],
-    on: {
-      "click": _vm.closePreview
-    }
-  }, [_c('image', {
-    staticClass: ["img-preview"],
+  })])], 2), _c('wxc-lightbox', {
+    ref: "wxc-lightbox",
     attrs: {
-      "src": _vm.previewUrl
+      "show": _vm.showPreview,
+      "imageList": _vm.previewList,
+      "indicatorColor": _vm.indicatorColor
     },
     on: {
-      "click": function($event) {}
+      "wxcLightboxOverlayClicked": _vm.closePreview
     }
-  })]) : _vm._e()], 1)
+  })], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

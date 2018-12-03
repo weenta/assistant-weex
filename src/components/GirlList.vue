@@ -5,45 +5,52 @@
         <loading-indicator class="indicator"/>
       </refresh>
       <cell v-for='(item,idx) in list' :key="idx">
-        <image :src='item.url' :placeholder="oss+'girl_off.png'" class="girl-img" resize='cover' @click='previewImg(item)'/>
+        <image :src='item.src' :placeholder="oss+'girl_off.png'" class="girl-img" resize='cover' @click='previewImg(idx)'/>
       </cell>
       <loading :display="loading ? 'show' : 'hide'" class="loading-wrapper" @loading="loadMore">
         <loading-indicator class="indicator"/>
       </loading>
     </waterfall>
-    <div v-if='showPreview' class="preview-wrapper" @click.stop="closePreview">
-      <image :src='previewUrl' class="img-preview" @click.stop/>
-    </div>
+    <wxc-lightbox
+      ref="wxc-lightbox"
+      :show="showPreview"
+      :image-list="previewList"
+      :indicator-color='indicatorColor'
+      @wxcLightboxOverlayClicked="closePreview"/>
   </div>
 </template>
 <script>
 import API from '../api'
 import mixin from '../mixin'
-
+import { WxcLightbox } from 'weex-ui'
 export default {
   components: {
+    WxcLightbox
   },
   mixins: [mixin],
   data() {
     return {
       page: 1,
-      list: [],
+      list: [], // 美女图片
+      previewList: [], // 预览列表
       loading: false,
       showPreview: false,
-      previewUrl: ''
+      indicatorColor: {'item-color': 'rgba(255, 195, 0, .5)','item-selected-color': '#ffc300','item-size': '0'}
     }
   },
   created() {
     this.getList()
   },
   methods: {
+    // 关闭图片
     closePreview() {
       this.showPreview = false
     },
+
     // 预览图片
-    previewImg(item) {
+    previewImg(idx) {
+      this.previewList = this.list.slice(idx)
       this.showPreview = true
-      this.previewUrl = item.url
     },
 
     // 刷新
@@ -75,7 +82,8 @@ export default {
 
     __formatList(list) {
       list.forEach(e=>{
-        this.list.push(e)
+        let o = {src: e.url}
+        this.list.push(o)
       })
     }
   },
@@ -97,21 +105,6 @@ export default {
   width: 350px;
   height: 400px;
   margin-bottom: 10px;
-}
-.preview-wrapper {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0,0,0,0.8);
-}
-.img-preview {
-  width: 650px;
-  height:900px;
-  position: absolute;
-  top: 100px;
-  left: 50px;
 }
 </style>
 
