@@ -23,7 +23,5 @@ http://weex.apache.org/cn/guide/extend-android.html
 
 ## Todo
 - 检测网络
-- 图片加载-loading
 - weex_sdk 升级0.19.0
 
-美女图片

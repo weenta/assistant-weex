@@ -18912,6 +18912,21 @@ module.exports = {
     "width": "350",
     "height": "400",
     "marginBottom": "10"
+  },
+  "preview-wrapper": {
+    "position": "absolute",
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "backgroundColor": "rgba(0,0,0,0.8)"
+  },
+  "img-preview": {
+    "width": "650",
+    "height": "900",
+    "position": "absolute",
+    "top": "100",
+    "left": "50"
   }
 }
 
@@ -18951,14 +18966,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
 
 exports.default = {
+  components: {},
   mixins: [_mixin2.default],
   data: function data() {
     return {
       page: 1,
       list: [],
-      loading: false
+      loading: false,
+      showPreview: false,
+      previewUrl: ''
     };
   },
   created: function created() {
@@ -18966,6 +18987,18 @@ exports.default = {
   },
 
   methods: {
+    closePreview: function closePreview() {
+      this.showPreview = false;
+    },
+
+    // 预览图片
+    previewImg: function previewImg(item) {
+      this.showPreview = true;
+      this.previewUrl = item.url;
+    },
+
+
+    // 刷新
     onRefresh: function onRefresh() {
       this.list = [];
       this.page = 1;
@@ -19040,7 +19073,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('image', {
       staticClass: ["girl-img"],
       attrs: {
-        "src": item.url
+        "src": item.url,
+        "placeholder": _vm.oss + 'girl_off.png',
+        "resize": "cover"
+      },
+      on: {
+        "click": function($event) {
+          _vm.previewImg(item)
+        }
       }
     })])
   }), _c('loading', {
@@ -19053,7 +19093,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('loading-indicator', {
     staticClass: ["indicator"]
-  })])], 2)], 1)
+  })])], 2), (_vm.showPreview) ? _c('div', {
+    staticClass: ["preview-wrapper"],
+    on: {
+      "click": _vm.closePreview
+    }
+  }, [_c('image', {
+    staticClass: ["img-preview"],
+    attrs: {
+      "src": _vm.previewUrl
+    },
+    on: {
+      "click": function($event) {}
+    }
+  })]) : _vm._e()], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
