@@ -17,10 +17,10 @@ export default {
   mixins: [mixin],
   data() {
     return {
-      title: '新闻',
-      source: '来源',
-      publishTime: '时间',
-      content: 'news detail',
+      title: '',
+      source: '',
+      publishTime: '',
+      content: '加载中...',
     }
   },
   created() {

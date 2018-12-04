@@ -62,7 +62,8 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.taobao.android:weex_sdk:0.16.0'
+//    compile 'com.taobao.android:weex_sdk:0.16.0'
+    compile project(':weex_sdk')
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.squareup.okhttp:okhttp:2.3.0'
     compile 'com.squareup.okhttp:okhttp-ws:2.3.0'

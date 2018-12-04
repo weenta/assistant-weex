@@ -8,12 +8,12 @@
         "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_16dp.png",
-        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_16dp.png",
+        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
         "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png",

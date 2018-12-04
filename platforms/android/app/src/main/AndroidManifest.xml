@@ -42,7 +42,7 @@
                 <action android:name="android.intent.action.VIEW"/>
                 <action android:name="com.weex.app.protocol.openurl"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.taobao.android.intent.category.WEEX"/>
+                <category android:name="com.weenta.assistant.WEEX"/>
 
                 <data android:scheme="http"/>
                 <data android:scheme="https"/>

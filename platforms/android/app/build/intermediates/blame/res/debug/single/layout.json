@@ -8,20 +8,20 @@
         "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/design/26.1.0/res/layout/design_layout_tab_text.xml"
     },
     {
-        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/layout/abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
         "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
         "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/layout/abc_action_menu_item_layout.xml"
+        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
         "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/design/26.1.0/res/layout/design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/layout/abc_action_menu_item_layout.xml"
     },
     {
         "merged": "/Users/weenta/01data/03weex/03assistant/platforms/android/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",

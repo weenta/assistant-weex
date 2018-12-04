@@ -1,1 +1,2 @@
-include ':app'
+include ':app', ':weex_sdk'
+project(':weex_sdk').projectDir = new File('app/sdk')

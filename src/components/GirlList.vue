@@ -35,7 +35,7 @@ export default {
       previewList: [], // 预览列表
       loading: false,
       showPreview: false,
-      indicatorColor: {'item-color': 'rgba(255, 195, 0, .5)','item-selected-color': '#ffc300','item-size': '0'}
+      indicatorColor: {'item-color': '#ffffff','item-selected-color': '#ffffff','item-size': '0'}
     }
   },
   created() {
@@ -50,7 +50,9 @@ export default {
     // 预览图片
     previewImg(idx) {
       this.previewList = this.list.slice(idx)
-      this.showPreview = true
+      setTimeout(() => {
+        this.showPreview = true
+      }, 100)
     },
 
     // 刷新

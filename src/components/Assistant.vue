@@ -21,7 +21,8 @@ export default {
         {
           label: '快递查询',
           path: 'pages/Express.js'
-        }
+        },
+        
       ]
     }
   },
